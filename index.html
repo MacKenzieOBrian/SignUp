@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head> 
+
+
+
+<body>
+<h2>Sign Up</h2>
+
+<form name="Email" action="/action_page.php">
+  <label for="email">Whats your Email?:</label><br>
+  <input type="text" id="email" name="email" value=""><br>
+
+  <label for="ConEmail">Confirm your email:</label><br>
+  <input type="text" id="ConEmail" name="ConEmail" value=""><br><br>
+  
+</form> 
+
+<form name="Password" action="/action_page.php">
+  <label for="password">Create a password:</label><br>
+  <input type="password" id="password"name="password" value=""><br><br>
+</form>
+
+<form name="Username" action="/action_page.php">
+  <label for="username">What do you want us to call you?</label><br>
+  <input type="text" id="username"name="username" value="">
+<br></form>
+
+
+<form name="Gender" action="/action_page.php">
+  <label for="gender">What's your gender:</label><br>
+  <input type="radio" id="male" name="gender" value="male">
+  <label for="male">Male</label>
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">Female</label>
+  <input type="radio" id="other" name="gender" value="other">
+  <label for="other">Other</label><br><br>
+</form> 
+
+<form name="Terms" action="/action_page.php">
+  <label for="terms">Agree to this thing</label>
+  <input type="checkbox" id="terms" name="terms" >
+</form>
+<br><br>
+<input type = "submit" name="Submit" onclick="validateForm()">
+
+
+<script>
+  function validateForm() {
+  var x = document.forms["Email"]["email"].value;
+  if (x == "") {
+    alert("Email must be filled out");
+    return false;
+  }
+  var y = document.forms["Password"]["password"].value;
+  if (y == "") {
+    alert("Password must be filled out");
+    return false;
+  }
+  var z = document.forms["Username"]["username"].value;
+  if (z == "") {
+    alert("username must be filled out");
+    return false;
+  }
+  var gender = document.forms["Gender"]["gender"].value;
+  if (gender == "") {
+    alert("Gender must be selected");
+    return false;
+  }
+  var agree = document.forms["Terms"]["terms"].value;
+  if (agree == false) {
+    alert("terms must be agreed to");
+    return false;
+  }
+
+}
+
+  
+
+
+</script>
+
+</head>
+</body>
+</html>
